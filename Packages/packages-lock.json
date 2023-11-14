@@ -146,6 +146,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.oculus": {
+      "version": "1.12.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.2.0",
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.xr.picoxr": {
       "version": "file:../PicoXR_Platform_SDK-1.2.5_B81",
       "depth": 0,

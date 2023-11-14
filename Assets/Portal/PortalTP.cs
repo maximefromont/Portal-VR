@@ -10,9 +10,11 @@ public class FromPortal : MonoBehaviour
 public class PortalTP : MonoBehaviour
 {
     public GameObject portalLinked;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Debug.Log("Hello");
     }
 
@@ -20,11 +22,19 @@ public class PortalTP : MonoBehaviour
     {
         // Add a variable in collision.gameobject fromPortal = true if not already exist
         FromPortal fromPortal = collision.gameObject.GetComponent<FromPortal>();
-        if (fromPortal == null || !fromPortal.fromPortal)
+        if (fromPortal == null)
         {
+            audioSource.Play();
+            // wait for the sound to finish
+            StartCoroutine(WaitForSound());
             collision.gameObject.AddComponent<FromPortal>();
             collision.gameObject.transform.position = portalLinked.transform.position;
         }      
+    }
+
+    IEnumerator WaitForSound()
+    {
+        yield return new WaitForSeconds(audioSource.clip.length);
     }
 
     void OnCollisionExit(Collision collision){
