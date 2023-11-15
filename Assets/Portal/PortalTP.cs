@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,26 @@ public class PortalTP : MonoBehaviour
 {
     public GameObject portalLinked;
     private AudioSource audioSource;
+    private Vector3 portalOut;
+    private Vector3 oldVelocity;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        Debug.Log("Hello");
+        string portalName = gameObject.name;
+        Debug.Log("Hello from " + portalName);
+
+        Vector3 playerPosition = GameObject.Find("Player").transform.position;
+        //GameObject.Find("Cube").transform.position = playerPosition;
+        // get portal position
+        Vector3 portalPosition = transform.position;
+        // portal out is vector to player position
+        portalOut = playerPosition - portalPosition;
+        // normalize
+        portalOut = portalOut.normalized;
+        portalOut = new Vector3(-portalOut.x, 0, portalOut.z);
+        Debug.Log(portalOut);
+
     }
 
     void OnCollisionEnter(Collision collision)
@@ -29,7 +45,15 @@ public class PortalTP : MonoBehaviour
             StartCoroutine(WaitForSound());
             collision.gameObject.AddComponent<FromPortal>();
             collision.gameObject.transform.position = portalLinked.transform.position;
-        }      
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            oldVelocity = rb.velocity;
+            rb.velocity = Vector3.zero;
+        }
+        else{
+            // change force of collision gameobject
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            rb.velocity = Vector3.Scale(oldVelocity, portalOut);
+        }
     }
 
     IEnumerator WaitForSound()
