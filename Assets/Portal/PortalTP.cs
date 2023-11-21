@@ -13,7 +13,6 @@ public class PortalTP : MonoBehaviour
     public GameObject portalLinked;
     private AudioSource audioSource;
     private Vector3 portalOut;
-    private Vector3 oldVelocity;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,12 +49,7 @@ public class PortalTP : MonoBehaviour
             collision.gameObject.AddComponent<FromPortal>();
             collision.gameObject.transform.position = portalLinked.transform.position;
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-            oldVelocity = rb.velocity;
-            rb.velocity = Vector3.zero;
-        }
-        else{
-            // change force of collision gameobject
-            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 oldVelocity = rb.velocity;
             rb.velocity = Vector3.Scale(oldVelocity, portalOut);
         }
     }
