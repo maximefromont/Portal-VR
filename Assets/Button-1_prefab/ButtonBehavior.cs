@@ -44,6 +44,12 @@ public class ButtonBehavior : MonoBehaviour
 
         //rb.transform.localScale = Vector3.Scale(initial_scale, button_pressed_scale_vector);
         rb.transform.localPosition = initial_position + button_pressed_move_vector;
+
+
+        //Test cube spawning
+        //GameObject test = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //test.transform.position = rb.transform.localPosition + new Vector3(0.0f, 2.0f, 2.0f);
+        //Rigidbody testRb = test.AddComponent<Rigidbody>();
     }
 
     public void UnpressButton()

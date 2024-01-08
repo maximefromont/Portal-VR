@@ -19,6 +19,4 @@ public class teleporting_script : MonoBehaviour
         
     }
 
-    private void teleportPlayer()
-
 }
