@@ -21,10 +21,10 @@ public class PortalTP : MonoBehaviour
         Debug.Log("Hello from " + portalName +", I am linked to " + portalLinked.name);
         Vector3 playerPosition = GameObject.Find("Player").transform.position;
         // get portal position
-        Vector3 portalPosition = transform.position;
+        Vector3 portalPosition = portalLinked.transform.position;
         // Get x rotation of portal
-        float xPortalRotation = transform.rotation.eulerAngles.x;
-        float yPortalRotation = transform.rotation.eulerAngles.y;
+        float xPortalRotation = portalLinked.transform.rotation.eulerAngles.x;
+        float yPortalRotation = portalLinked.transform.rotation.eulerAngles.y;
         // portal out is vector to player position
         portalOut = playerPosition - portalPosition;
         // normalize

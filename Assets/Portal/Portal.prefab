@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 124995927963322021}
   - component: {fileID: 124995927963322018}
   - component: {fileID: -8387320207774296668}
-  - component: {fileID: 4156174588946935765}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -224,15 +223,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4156174588946935765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124995927963322040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ef42df2863eff4aab13a3acb435d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
