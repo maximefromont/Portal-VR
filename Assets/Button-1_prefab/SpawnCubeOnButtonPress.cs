@@ -9,6 +9,8 @@ public class SpawnCubeOnButtonPress : MonoBehaviour
 
     private ButtonBehavior buttonBehavior;
 
+    private GameObject cube;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +30,12 @@ public class SpawnCubeOnButtonPress : MonoBehaviour
 
     private void HandleButtonPress()
     {
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         
         //Make sure to get the local position of the button
         Vector3 button_position = buttonBehavior.transform.position;
 
-        cube.transform.position = button_position + new Vector3(-1.0f, 2.0f, 0.0f);
+        cube.transform.position = button_position + new Vector3(0.0f, 4.0f, 1.0f);
 
         print("Button pressed! Cube created at " + cube.transform.position.ToString());
 
