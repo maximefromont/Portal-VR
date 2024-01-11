@@ -5,32 +5,50 @@ using UnityEngine;
 
 public class DebugButton : MonoBehaviour
 {
+    //Necessary to receive the event of the button
+    private ButtonBehavior buttonBehavior;
     private bool OnDebug;
-    private 
-    // Start is called before the first frame update
+    public GameObject console;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    //on click, toggle debug mode
-    public void ToggleDebug()
-    {
-        OnDebug = !OnDebug;
+        //Necessary to recieve button press event
+        buttonBehavior = GetComponent<ButtonBehavior>();
+        buttonBehavior.OnButtonPress += HandleButtonPress;
         OnDebug = Convert.ToBoolean(PlayerPrefs.GetInt("DebugMode"));
+        Debug.Log("DebugMode : " + OnDebug);
+
+    }
+
+        void Update()
+    {
+        
+    }
+
+        private void HandleButtonPress()
+    {
+        //TODO : Code behavior here
+
+        OnDebug = !OnDebug;
         PlayerPrefs.SetInt("DebugMode", Convert.ToInt32(OnDebug));
-        gameObject.SetActive(OnDebug);
-        if(OnDebug){
-            //set color red
-        }
-        else{
-            // set color green
-        }
+        console.gameObject.SetActive(OnDebug);
+        Debug.Log("DebugMode : " + OnDebug);
+
+        //Here is an example
+        /*
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        
+        Vector3 button_position = buttonBehavior.transform.position;
+
+        cube.transform.position = button_position + new Vector3(-1.0f, 2.0f, 0.0f);
+
+        Debug.Log("Cube created at " + cube.transform.position.ToString());
+
+        Rigidbody cube_rigidbody = cube.AddComponent<Rigidbody>();
+        */
+
+
+
+        //Don't forget to debug.log what you did for better debugging
     }
 }
