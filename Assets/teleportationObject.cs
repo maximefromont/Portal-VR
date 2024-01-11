@@ -24,21 +24,22 @@ public class teleportationObject : MonoBehaviour
         Vector3 xrRigPosition = xrRig.transform.position;
         //get the difference between the two positions
         Vector3 difference = teleportPosition - xrRigPosition;
-        //teleport the xr rig to the object to teleport
-        xrRig.transform.position = teleportPosition;
+        //teleport the xr rig to the object to teleport with 1 meter offset
+        xrRig.transform.position = teleportPosition + difference.normalized * 1f;
         //play the teleportation sound
         teleportationSound.Play();
 
         //activate the particle effect for 3 seconds
         particleManager.Activate();
         Invoke("DeactivateParticle", 3f);
+
         
     }
 
     void Update()
     {
         //if the user press the touchpad or the right arrow key
-        if (_inputManager.TouchPad[0] > 0.5f || Input.GetKeyDown(KeyCode.RightArrow))
+        if (_inputManager.IsPressButton || Input.GetKeyDown(KeyCode.RightArrow))
         {
             //teleport the xr rig to the object to teleport
             teleport();

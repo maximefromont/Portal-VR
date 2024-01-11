@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/level-1_tutorial-1.unity
     guid: cc6bfa4b233840047a387ab377d9c163
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d65b918371d1c5a43869172abc84dca1
+  - enabled: 1
+    path: Assets/Scenes/kevinScene.unity
+    guid: cf5e5d6041b0e4744ac222a08bda8d17
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f8bf26bd8aa7c1e4e93640359be1383d, type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 8eaf9ada5bbb8584f985fb253eedd3d6, type: 2}
