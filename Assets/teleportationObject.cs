@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class teleportationObject : MonoBehaviour
-{    
+{
     public AudioSource teleportationSound;
-    public ParticleEffectManager particleManager;
+
 
     public GameObject xrRig;
     public GameObject objectToTeleport;
@@ -29,11 +29,9 @@ public class teleportationObject : MonoBehaviour
         //play the teleportation sound
         teleportationSound.Play();
 
-        //activate the particle effect for 3 seconds
-        particleManager.Activate();
-        Invoke("DeactivateParticle", 3f);
 
-        
+
+
     }
 
     void Update()
@@ -45,5 +43,5 @@ public class teleportationObject : MonoBehaviour
             teleport();
         }
     }
-   
+
 }

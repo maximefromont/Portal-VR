@@ -11,6 +11,7 @@ public class DebugMode : MonoBehaviour
     void Start()
     {
         OnDebug = Convert.ToBoolean(PlayerPrefs.GetInt("DebugMode"));
+        OnDebug = true;
         gameObject.SetActive(OnDebug);
     }
 
