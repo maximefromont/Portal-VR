@@ -30,6 +30,11 @@ public class SpawnCubeOnButtonPress : MonoBehaviour
 
     private void HandleButtonPress()
     {
+        if(cube != null)
+        {
+            Destroy(cube);
+        }
+        
         cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         
         //Make sure to get the local position of the button
