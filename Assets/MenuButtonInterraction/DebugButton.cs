@@ -31,8 +31,9 @@ public class DebugButton : MonoBehaviour
 
         OnDebug = !OnDebug;
         PlayerPrefs.SetInt("DebugMode", Convert.ToInt32(OnDebug));
-        console.gameObject.SetActive(OnDebug);
         Debug.Log("DebugMode : " + OnDebug);
+        console.gameObject.SetActive(OnDebug);
+        
 
         //Here is an example
         /*
