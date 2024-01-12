@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class teleportationObject : MonoBehaviour
-{
+{    
     public AudioSource teleportationSound;
-
+    public ParticleEffectManager particleManager;
 
     public GameObject xrRig;
     public GameObject objectToTeleport;
@@ -24,14 +24,16 @@ public class teleportationObject : MonoBehaviour
         Vector3 xrRigPosition = xrRig.transform.position;
         //get the difference between the two positions
         Vector3 difference = teleportPosition - xrRigPosition;
-        //teleport the xr rig to the object to teleport one metter above
-        xrRig.transform.position = teleportPosition + new Vector3(0, 1, 0);
+        //teleport the xr rig to the object to teleport with 1 meter offset
+        xrRig.transform.position = teleportPosition + difference.normalized * 1f;
         //play the teleportation sound
         teleportationSound.Play();
 
+        //activate the particle effect for 3 seconds
+        particleManager.Activate();
+        Invoke("DeactivateParticle", 3f);
 
-
-
+        
     }
 
     void Update()
@@ -43,5 +45,5 @@ public class teleportationObject : MonoBehaviour
             teleport();
         }
     }
-
+   
 }
