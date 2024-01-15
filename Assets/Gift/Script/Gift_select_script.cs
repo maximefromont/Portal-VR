@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ca-cest-un-cadeau_script : MonoBehaviour
+public class Gift_select_script : MonoBehaviour
 {
+
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        rb = GetComponent<Rigidbody>();
         
     }
 
@@ -14,5 +19,11 @@ public class ca-cest-un-cadeau_script : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnGiftSelect()
+    {
+        //Turn rigidbody invisible
+        rb.GetComponent<Renderer>().enabled = false;
     }
 }
