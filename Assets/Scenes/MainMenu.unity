@@ -362,6 +362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Text (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fdad9d952ae84cafb74c63f2e694d042, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3300000, guid: fdad9d952ae84cafb74c63f2e694d042, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -664,6 +668,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a33be425304354d95f9f067f3ac58b, type: 3}
+--- !u!114 &1423877239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5353591955267077830, guid: 3ef2c29f7845b5e48be7f6c59e469967, type: 3}
+  m_PrefabInstance: {fileID: 6634094996501686377}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1424858491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1016,6 +1031,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4302250967631807892, guid: 5fc9812862209604d876b610ef28fbce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4302250967634909588, guid: 5fc9812862209604d876b610ef28fbce, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1077,6 +1096,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3846602108877327326, guid: 3ef2c29f7845b5e48be7f6c59e469967, type: 3}
+      propertyPath: BluePortalSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3086d66a563317b40a20a20da2c64ac0, type: 3}
+    - target: {fileID: 3846602108877327326, guid: 3ef2c29f7845b5e48be7f6c59e469967, type: 3}
+      propertyPath: TeleportationItemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
     - target: {fileID: 5080953515388052268, guid: 3ef2c29f7845b5e48be7f6c59e469967, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1260,6 +1287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Debug Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8046375425800197409, guid: 3819f45a264e4d24985af994b57d23b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8046375425803487521, guid: 3819f45a264e4d24985af994b57d23b0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1321,6 +1352,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 926018852}
+    - target: {fileID: 8309812291649019728, guid: f4c464726f13b0c40bd27a5ae487295d, type: 3}
+      propertyPath: m_TeleportationProvider
+      value: 
+      objectReference: {fileID: 1423877239}
     - target: {fileID: 8309812291649019729, guid: f4c464726f13b0c40bd27a5ae487295d, type: 3}
       propertyPath: m_Name
       value: Teleportation Area
