@@ -8,18 +8,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Objects-creation.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: cab11ed23f666234296a4e22e08384de
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/level-1_tutorial-1.unity
     guid: cc6bfa4b233840047a387ab377d9c163
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d65b918371d1c5a43869172abc84dca1
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/kevinScene.unity
     guid: cf5e5d6041b0e4744ac222a08bda8d17
+  - enabled: 1
+    path: Assets/Scenes/lvl-1-kevin.unity
+    guid: 19458405158d19b4baa9b7a918c5807b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f8bf26bd8aa7c1e4e93640359be1383d, type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 8eaf9ada5bbb8584f985fb253eedd3d6, type: 2}
