@@ -9,6 +9,8 @@ public class detectkeyObject : MonoBehaviour
     // This method is called when this collider/rigidbody has begun touching another rigidbody/collider
 
     public GameObject key;
+    //add an audio source
+    public AudioSource keySound;
     //add key number
      public UnityEvent onKeyTouch; // Define a new UnityEvent
     public int keyNumber = 0;
@@ -19,6 +21,8 @@ public class detectkeyObject : MonoBehaviour
         {
             // Print a message
             Debug.Log("You have the key");
+            //play the key sound
+            keySound.PlayOneShot(keySound.clip);
 
             // Destroy the key
             Destroy(collision.gameObject);
