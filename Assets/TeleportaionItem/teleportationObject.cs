@@ -27,7 +27,7 @@ public class teleportationObject : MonoBehaviour
         //teleport the xr rig to the object to teleport with 1 meter offset
         xrRig.transform.position = teleportPosition + difference.normalized * 1f;
         //play the teleportation sound
-        teleportationSound.Play();
+        teleportationSound.PlayOneShot(teleportationSound.clip);
 
         //activate the particle effect for 3 seconds
         particleManager.Activate();
