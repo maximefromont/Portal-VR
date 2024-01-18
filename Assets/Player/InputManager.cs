@@ -4,6 +4,7 @@ using Unity.Mathematics;
 
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class InputManager : MonoBehaviour
     public bool IsBackButton { get; set; }
 
     public bool IsPressButton  { get; set; }
-
+    public bool IsAppButton  { get; set; }
     public bool IsTouchPad { get; set; }
     public float2 TouchPad { get; set; }
 
@@ -59,6 +60,16 @@ public class InputManager : MonoBehaviour
             if (_controller.TryGetFeatureValue(CommonUsages.menuButton, out bool backButtonValue))
             {
                 IsBackButton = backButtonValue;
+                if(IsBackButton)
+                {
+                    // Get current scene name
+                    string sceneName = SceneManager.GetActiveScene().name;
+                    if(sceneName != "Menu"){
+                        PlayerPrefs.SetString("LastScene", sceneName);
+                        SceneManager.LoadScene("Menu");
+                    }
+                        
+                }
             }
 
             if (_controller.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 touchPadValue))
