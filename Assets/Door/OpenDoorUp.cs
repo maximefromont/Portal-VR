@@ -21,16 +21,19 @@ public class OpenDoorUp : MonoBehaviour
 
     IEnumerator OpenDoor(float seconds, GameObject Door)
     {
+        AudioSource DoorSound = Door.GetComponent<AudioSource>();
+        DoorSound.Play();
         while (Door.transform.position.y < 3)
         {
-            Door.transform.position += new Vector3(0, 0.001f, 0);
+            Door.transform.position += new Vector3(0, 0.01f, 0);
             Debug.Log("Door position: " + Door.transform.position);
             yield return new WaitForSeconds(seconds);
         }
+        DoorSound.Stop();
     }
 
     private void HandleButtonPress()
     {
-        StartCoroutine(OpenDoor(0.001f, Door));
+        StartCoroutine(OpenDoor(0.00001f, Door));
     }
 }

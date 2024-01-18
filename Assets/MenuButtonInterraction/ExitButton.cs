@@ -25,6 +25,8 @@ public class ExitButton : MonoBehaviour
         private void HandleButtonPress()
     {
         //TODO : Code behavior here
+        //Delete all player prefs
+        PlayerPrefs.DeleteAll();
         Application.Quit();
 
 
