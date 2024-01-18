@@ -16,7 +16,6 @@ public class DebugButton : MonoBehaviour
         buttonBehavior = GetComponent<ButtonBehavior>();
         buttonBehavior.OnButtonPress += HandleButtonPress;
         OnDebug = Convert.ToBoolean(PlayerPrefs.GetInt("DebugMode"));
-        Debug.Log("DebugMode : " + OnDebug);
 
     }
 
@@ -31,7 +30,6 @@ public class DebugButton : MonoBehaviour
 
         OnDebug = !OnDebug;
         PlayerPrefs.SetInt("DebugMode", Convert.ToInt32(OnDebug));
-        Debug.Log("DebugMode : " + OnDebug);
         console.gameObject.SetActive(OnDebug);
         
 
