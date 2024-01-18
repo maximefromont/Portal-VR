@@ -5,3 +5,39 @@
 ![Occulus](https://img.shields.io/badge/Occulus-1A1A1A?style=for-the-badge&logo=oculus&logoColor=white)
 ![Contributers](https://img.shields.io/github/contributors/maximefromont/Portal-VR?style=for-the-badge)
 # Portal-VR
+
+## Bareme (Auto-évaluation)
+
+### Environnement
+
+- [x] Richesse et cohérence de l'environnement	(2)
+- [x] Sons diégétiques / d'ambiance + sound effects cohérents, eventuellement - spatialisés	(1)
+
+### Interactions
+
+- [x] richesse des interactions	(2)
+- [x] locomotion	(2)
+- [x] menu cohérent	(1)
+- [ ] Sons d'UI	(1)
+- [x] bouton ou fonction quitter	(0,5)
+- [x] mode debug	(2)
+- [ ] Consignes ou affordances fortes	(1)
+
+### Code
+
+- [x] structure du projet	(1)
+- [ ] propreté du code	(1)
+- [ ] entêtes et commentaires	(1)
+
+### Généralité / gestion de projets
+
+- [x] ambitions du projet	(2)
+- [ ] gameplay / fun	(1)
+- [x] respect du thème	(1)
+- [x] nom de projet / icone de projet	(0,5)
+
+### Malus
+
+- [ ] Cybersickness (aucune prise en compte ou cybersickness évidente)	(-1)
+	
+TOTAL	15/20 (estimé)
