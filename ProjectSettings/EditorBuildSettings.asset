@@ -5,33 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-    guid: cab11ed23f666234296a4e22e08384de
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 17776cd054682684fb869246b6bcee8a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/lv1.unity
     guid: e1500469a51d4f84eb2f855f8151fe67
-  - enabled: 0
-    path: Assets/Scenes/Objects-creation.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/level-1_tutorial-1.unity
-    guid: cc6bfa4b233840047a387ab377d9c163
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/kevinScene.unity
-    guid: cf5e5d6041b0e4744ac222a08bda8d17
-  - enabled: 0
-    path: Assets/Scenes/lvl-1-kevin.unity
-    guid: 19458405158d19b4baa9b7a918c5807b
   - enabled: 1
     path: Assets/Scenes/lv2.unity
     guid: 7c2730317f73c004a8526122a099e061
