@@ -59,16 +59,10 @@ public class InputManager : MonoBehaviour
 
             if (_controller.TryGetFeatureValue(CommonUsages.menuButton, out bool backButtonValue))
             {
-                IsBackButton = backButtonValue;
-                if(IsBackButton)
+                if(backButtonValue)
                 {
-                    // Get current scene name
-                    string sceneName = SceneManager.GetActiveScene().name;
-                    if(sceneName != "Menu"){
-                        PlayerPrefs.SetString("LastScene", sceneName);
-                        SceneManager.LoadScene("Menu");
-                    }
-                        
+                    Debug.Log("Back Button Pressed");
+                    SceneManager.LoadScene("Menu");   
                 }
             }
 
