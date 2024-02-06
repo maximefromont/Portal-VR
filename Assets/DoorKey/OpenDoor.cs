@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     public detectkeyObject detectKeyObject; 
+    public GameObject Door;
    //make an a door move up after 10 seconds
     void Start()
     {
@@ -15,13 +16,24 @@ public class OpenDoor : MonoBehaviour
     void OnKeyTouch()
     {
         Debug.Log("You have the key !!!!!");
-        StartCoroutine(Open());
+        StartCoroutine(Open(0.00001f, Door));
     }
 
-    IEnumerator Open()
+    IEnumerator Open(float seconds, GameObject Door)
     {
-        yield return new WaitForSeconds(1);
-        transform.Translate(0, 5, 0);
+                AudioSource DoorSound = Door.GetComponent<AudioSource>();
+        DoorSound.Play();
+        while (Door.transform.position.y <30  )
+        {
+            Door.transform.position += new Vector3(0, 0.05f, 0);
+            Debug.Log("Door position: " + Door.transform.position);
+            yield return new WaitForSeconds(seconds);
+        }
+        DoorSound.Stop();
+
+
+
+        
     }
 
     
