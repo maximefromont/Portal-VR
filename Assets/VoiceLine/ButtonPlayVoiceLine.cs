@@ -6,15 +6,15 @@ public class ButtonPlayVoiceLine : MonoBehaviour
 {
     private ButtonBehavior buttonBehavior;
     public AudioSource audioSource;
-    public string buttonName;
-    private bool alredayPlayed;
+    //public string buttonName;
+    //private bool alredayPlayed;
 
     void Start()
     {
         //Necessary to recieve button press event
         buttonBehavior = GetComponent<ButtonBehavior>();
         buttonBehavior.OnButtonPress += HandleButtonPress;
-        alredayPlayed = PlayerPrefs.GetInt(buttonName) == 1;
+        //alredayPlayed = PlayerPrefs.GetInt(buttonName) == 1;
     }
 
         void Update()
@@ -25,10 +25,6 @@ public class ButtonPlayVoiceLine : MonoBehaviour
         private void HandleButtonPress()
     {
         //TODO : Code behavior here
-        if(!alredayPlayed){
-            audioSource.Play();
-            alredayPlayed = true;
-            PlayerPrefs.SetInt(buttonName, 1);
-        }
+        audioSource.Play();
     }
 }
